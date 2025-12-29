@@ -1,0 +1,34 @@
+/* 主容器的設定 */
+.container {
+    flex: 1; /* 讓 `container` 撐開剩餘空間 */
+    flex-wrap: wrap; /* 內容自動換行 */
+    display: flex; /* 使用彈性盒模型 */
+    justify-content: space-between; /* 子項目之間的間距 */
+    gap: 15px; /* 控制間距，而不影響寬度計算 */
+    padding: 20px; /* 容器內距 */
+    max-width: 1250px; /* 最大寬度一致 */
+    margin: 0 auto; /* 置中 */
+    box-sizing: border-box; /* 包括內距與邊框在寬度內 */
+    margin-bottom: 10px; /* 增加與底部的外邊距 */
+}
+
+/* 主橫幅區塊樣式 */
+.main-banner {
+    background-image: url('../assets/images/000.jpg'); 
+    background-size: cover; 
+    background-position: center bottom;
+    background-repeat: no-repeat; 
+    opacity: 0.8; /* 透明度 0~1，1 是完全不透明 */
+    flex: 1 1 80%; /* 彈性比例與寬度 */
+    margin: 10px ; /* 卡片外距 */
+    padding: 30px; /* 區塊內距 */
+    display: flex; /* 使用彈性盒子排版 */
+    flex-direction: column;  /* 讓內容垂直排列 */
+    align-items: flex-start; /* flex-start:子項目靠上排列 / center:垂直置中內容 */
+    justify-content: space-between; /* space-between:子項目間隔 */
+    border-radius: 10px; /* 圓角設定 */
+    margin-top: 20px; /* 上方間距 */
+    border: 1px solid #cccccc; /* 淡灰色邊框 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+    height: 70vh; /* 設定為視窗高度的 X0% */
+}
