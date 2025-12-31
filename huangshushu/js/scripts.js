@@ -252,6 +252,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ====== 這裡開始新增「前往結帳」相關程式 ======
+
+  // 「前往結帳」按鈕
+  const btnCheckout = document.getElementById('btnCheckout');
+  if (btnCheckout) {
+    btnCheckout.addEventListener('click', function () {
+      if (!CART || CART.length === 0) {
+        alert('購物車是空的');
+        return;
+      }
+
+      // 把購物車轉成 LINE 要的文字內容
+      const orderList = CART.map(item => {
+        let line = `${item.name} x${item.qty} = $${item.subtotal}`;
+        if (item.variantLabel) line += ` (${item.variantLabel})`;
+        if (item.tastes && item.tastes.length > 0) line += ` [${item.tastes.join('、')}]`;
+        if (item.note) line += ` 備註：${item.note}`;
+        return line;
+      }).join('\n');
+
+      const totalAmount = CART.reduce((sum, it) => sum + it.subtotal, 0);
+
+      // 送出到 GAS
+      sendCartToLine({
+        orderList: orderList,
+        totalAmount: totalAmount
+      });
+    });
+  }
+
+  // 送出購物車到 GAS
+  function sendCartToLine(data) {
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbyHYVjjMfc9aJIc8x7303wKS1g95GKUBl9fBmglqylwz3aJXsjB4qmfyRGCMJHKRTe8_A/exec'; // 換成你的 GAS Web App URL
+
+    fetch(GAS_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('訂單已送出，店家會在 LINE 收到通知！');
+        // 如果你希望送出後清空購物車，可以在這裡加：
+        // CART.length = 0;
+        // dropCart();
+        // updateCartUI();
+      } else {
+        alert('送出失敗，請稍後再試');
+      }
+    })
+    .catch(error => {
+      console.error('送出訂單失敗:', error);
+      alert('網路錯誤，請檢查連線');
+    });
+  }
+
+  // ====== 「前往結帳」相關程式到這裡為止 ======
+
   // 口味加價
   function tastesDelta() {
     const cont = document.getElementById('tasteContainer');
