@@ -534,3 +534,4 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCartUI(); // 初始渲染（顯示$0與空車提示）
   
 });
+
