@@ -1,0 +1,426 @@
+/* ===================================
+   Google Fonts 引入
+   =================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+/* ===================================
+   CSS 變數定義 (Custom Properties)
+   =================================== */
+:root {
+    --primary-blue: #1E3A8A;
+    --soft-blue: #F0F4FF;
+    --slate-grey: #858b96;
+    --cloud-grey: #f3f3f3; 
+    --dark-green: #005F02;
+    --cloud-green: #ACBFA4;
+    --amber-warm: #F59E0B;
+    --cloud-orange: #fff5ec;
+    --bg-cream: #FAF9F6;
+}
+
+/* ===================================
+   基礎設定
+   =================================== */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--bg-cream);
+    color: #1E293B;
+    overflow-x: hidden;
+}
+
+/* ===================================
+   字體系統
+   =================================== */
+/* 強調文字 */
+.text-strong {
+    font-weight: 700;
+    color: #111827; /* 深灰黑 */
+}
+
+.text-strong-blue {
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.text-strong-orange {
+    font-weight: 700;
+    color: var(--amber-warm);
+}
+
+/* 次要強調 */
+.text-medium {
+    font-weight: 500;
+    color: #1f2937;
+}
+
+/* 一般內文 */
+.text-regular {
+    font-weight: 300;
+    color: #374151;
+}
+
+
+/* 非常弱化 */
+.text-muted {
+    font-weight: 300;
+    color: #0a111c;
+}
+
+/* ===================================
+   自定義按鈕樣式
+   =================================== */
+.btn-outline-blue {
+    background-color: transparent;          /* 淺米色背景 */
+    color: var(--primary-blue);                     /* 深灰文字 */
+    border: 1.5px solid var(--primary-blue);        /* 深色描邊 */
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-outline-blue:hover {
+    background-color: var(--primary-blue);          /* 深色背景 */
+    color: #ffffff;                     /* 白字 */
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.btn-solid-black {
+    background-color: #111827;   /* 深灰黑 */
+    color: #ffffff;
+    border: 1px solid #111827;
+
+    /* btn-sm */
+    font-size: 0.875rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    /* rounded-pill */
+    border-radius: 999px;
+
+    transition: 
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-solid-black:hover {
+    background-color: #1f2937;
+    border-color: #1f2937;
+    color: #ffffff;
+}
+
+.btn-outline-black {
+    background-color: transparent;
+    color: #111827;
+    border: 1px solid #111827;
+
+    /* btn-sm */
+    font-size: 0.875rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    /* rounded-pill */
+    border-radius: 999px;
+
+    transition: 
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-outline-black:hover {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.btn-outline-white {
+    min-width: 120px;
+    background-color: transparent;
+    color: #f9fafb;                 /* 淺色文字（white-ish） */
+    border: 1px solid #f9fafb;
+
+    /* btn-sm */
+    font-size: 0.875rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    /* rounded-pill */
+    border-radius: 999px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-outline-white:hover {
+    background-color: #f9fafb;
+    color: #111827;                 /* hover 反轉為深色字 */
+}
+
+/* ===================================
+   自定義標籤
+   =================================== */
+.tag-blue {
+    background-color: var(--soft-blue);
+    color: var(--primary-blue);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.tag-grey {
+    background-color: var(--slate-grey);
+    color: var(--cloud-grey);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+/* ===================================
+   導覽列
+   =================================== */
+.navbar-glass {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    letter-spacing: -0.5px;
+    color: var(--primary-blue);
+}
+
+/* ===================================
+   Hero 區塊樣式
+   =================================== */
+.hero-section {
+    padding: 240px 0 180px;
+    background: radial-gradient(circle at 80% 20%, rgba(30, 58, 138, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);
+}
+
+
+.hero-desc {
+    max-width: 768px;
+    line-height: 1.8;
+}
+
+/* ===================================
+   區塊分隔線
+   =================================== */
+.section-divider-short {
+    width: 50px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--amber-warm); /* 或你要的顏色 */
+}
+
+.section-divider {
+    margin: 3rem 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+/* ===================================
+   技術規格卡片
+   =================================== */
+.tech-spec-card {
+    background: var(--cloud-orange);
+    border-radius: 16px;
+    border-left: 5px solid var(--amber-warm);
+    padding: 25px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.spec-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px;
+    transition: all 0.2s;
+}
+
+.spec-item:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-3px);
+}
+
+.spec-note {
+    font-size: 10px;
+}
+
+/* ===================================
+   圖片佔位符 (Image Placeholder)
+   =================================== */
+.img-placeholder {
+    background-color: #f1f5f9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    min-height: 380px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景網格效果 */
+.img-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 48%, rgba(30, 58, 138, 0.02) 50%, transparent 52%);
+    background-size: 20px 20px;
+}
+
+/* ===================================
+   視覺輪播
+   =================================== */
+/* Visual Swiper 外框 */
+.visual-swiper-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #ffffff;
+}
+
+/* Swiper 本體 */
+.visual-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* 每張圖片 */
+.visual-slide-img, .visual-slide-video {
+    width: 100%;
+    height: 100%;
+    /* cover / contain */
+    display: block;
+    object-fit: contain; 
+    object-position: center;
+}
+
+/* 外部分頁容器 */
+.visual-swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+/* 圓點樣式 */
+.visual-swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: var(--cloud-green);
+    opacity: 1;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* 目前啟用的圓點 */
+.visual-swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--dark-green);
+    transform: scale(1.15);
+}
+
+
+/* ===================================
+   SVG 圓餅圖樣式
+   =================================== */
+.circular-chart {
+    max-width: 200px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+}
+
+/* ===================================
+   滾動顯示動畫 (Scroll Reveal)
+   =================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================================
+   Publications 
+   =================================== */
+/* 時間軸樣式 (Timeline - One Side) */
+.timeline-item {
+    border-left: 2px solid #f1f5f9;
+    padding-left: 30px;
+    position: relative;
+    padding-bottom: 45px;
+}
+
+/* 時間軸圓點 */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--amber-warm);
+    box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+}
+
+.timeline-subitem {
+    margin-top: 0.4rem;
+}
+
+/* ===================================
+   工具類別 (Utility Classes)
+   =================================== */
+.tracking-widest {
+    letter-spacing: 0.1em;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.leading-relaxed {
+    line-height: 1.75;
+}
+
+.leading-sm {
+    line-height: 1.5;
+}
+
+/* Icon 尺寸 */
+.w-3 { width: 0.75rem; }
+.h-3 { height: 0.75rem; }
+.w-4 { width: 1rem; }
+.h-4 { height: 1rem; }
+.w-5 { width: 1.25rem; }
+.h-5 { height: 1.25rem; }

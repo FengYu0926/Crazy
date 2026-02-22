@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FK</title>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- MathJax for LaTeX -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入 Swiper CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"  rel="stylesheet">
+    <!-- 自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 引入 Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 自定義 JavaScript -->
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-glass fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand text-strong-blue" href="" >PORTFOLIO</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-4 text-medium small">
+                    <li class="nav-item"><a class="nav-link" href="#hero">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">專案實踐</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">專業技能</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">著作發表</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container text-center">
+            <div class="">  <!-- reveal -->
+                <div class="tag-blue mb-4">國立高雄科技大學</div>
+                <h1 class="display-3 text-strong mb-3">我是 <span class="text-strong-blue">許峯瑜</span></h1>
+                <h2 class="h3 text-regular mb-5">橋接 <span class="text-medium">AI 深度學習</span> 與 <span class="text-medium">軟體</span> 整合</h2>
+                <p class="lead mx-auto text-regular hero-desc mb-5" >
+                    數位與影像處理實驗室 | 電訊工程碩士<br>
+                    具備 <span class="text-medium">YOLO 模型改良</span>、<span class="text-medium">網站撰寫</span>到<span class="text-medium">自動化分析工具</span>的實作經驗<br>
+                    探索技術在不同場景下的應用價值<br>
+                </p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <!-- <a href="#projects" class="btn btn-outline-blue shadow-sm">核心研究成果 <i data-lucide="brain-circuit" class="ms-2 w-4 h-4"></i></a> -->
+                    <a href="assets/docs/面試簡報.pdf" download="許峯瑜_履歷.pdf" class="btn btn-outline-blue shadow-sm">下載 PDF 履歷</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal">
+                <h2 class="display-6 text-strong">指標性專案實踐</h2>
+                <div class="mx-auto section-divider-short"></div>
+                <p class="text-regular mt-3">結合碩士研究深度與應用開發實務</p>
+            </div>
+
+            <!-- Flagship Project: Thesis + Long-term Care -->
+            <div class="row align-items-center mb-5 g-5 reveal">
+                <!-- Visual Column -->
+                <div class="col-lg-6">
+                    <div class="visual-swiper-wrapper shadow-sm">
+                        <div class="swiper visual-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <video
+                                        class="visual-slide-video"
+                                        src="assets/videos/ds.mp4"
+                                        controls
+                                        muted
+                                        playsinline
+                                    ></video>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <img 
+                                        class="visual-slide-img"
+                                        src="assets/images/投影片1.PNG"
+                                        alt="Demo 圖 2"
+                                    >
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <img 
+                                        class="visual-slide-img"
+                                        src="assets/images/投影片2.PNG"
+                                        alt="Demo 圖 3"
+                                    >
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="swiper-slide">
+                                    <img 
+                                        class="visual-slide-img"
+                                        src="assets/images/投影片3.PNG"
+                                        alt="Demo 圖 3"
+                                    >
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 小圓點 -->
+                    <div class="visual-swiper-pagination"></div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="col-lg-6">
+                    <div class="ps-lg-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="px-3 py-2 tag-blue">碩士論文</span>
+                            <!-- <span class="text-strong-orange"> IEEE IS3C Best Paper</span> -->
+                        </div>
+                        <h2 class="text-medium mb-2">基於 YOLOv10-C2f-FEMA 的智慧異常偵測與即時通知系統</h2>
+                        <p class="text-regular mb-4 leading-relaxed">
+                            本研究以長照機構實際應用為出發點，解決「姿勢異常偵測」與「身分辨識」雙重挑戰。系統採用改良的 <strong class="text-medium">YOLOv10-C2f-FEMA</strong> 模型，
+                            並結合自行設計的<strong class="text-medium">雙模型觸發機制</strong>，能在有限的硬體資源下，實現高精度即時偵測與自動化個別通知。
+                        </p>
+
+                        <!-- Tech Spotlight Box -->
+                        <div class="tech-spec-card">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h6 class="text-medium mb-0"><i data-lucide="activity" class="me-2 w-4 h-4"></i>核心技術指標 (Performance)</h6>
+                            </div>
+                            <div class="row g-3 text-center">
+                                <div class="col-4">
+                                    <div class="spec-item">
+                                        <div class="h5 text-strong-blue mb-0">+5.5%</div>
+                                        <div class="spec-note text-strong-blue">準確率(Precision)提升</div> <!--  -->
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="spec-item">
+                                        <div class="h5 text-strong-blue mb-0">+3.6%</div>
+                                        <div class="spec-note text-strong-blue">召回率(Recall)提升</div> <!--  -->
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="spec-item">
+                                        <div class="h5 text-strong-blue mb-0">+3.8%</div>
+                                        <div class="spec-note text-strong-blue">平均精度(mAP@0.5)提升 </div> <!--  -->
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="mt-3 pt-2">
+                                <p class="small text-regular mb-0 leading-sm">
+                                    <span class="text-strong">創新架構：</span> 於骨幹引入 C2f-Faster 模組並在頸部整合 EMA 機制，優化特徵融合效率。
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="list-unstyled mt-4 small text-regular">
+                            <li class="mb-2"><i data-lucide="check-circle" class="text-success me-2 w-4 h-4"></i><strong>系統化管理：</strong> 建構具備權限管理之網頁平台，支援即時影像與異常紀錄查詢</li>
+                            <li class="mb-2"><i data-lucide="check-circle" class="text-success me-2 w-4 h-4"></i><strong>資料集驗證：</strong> 模型浮點運算次數減少 33.6%、參數量減少 20.6%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <hr class="my-5 opacity-5"> -->
+            <hr class="section-divider">
+
+            <!-- Project: Volleyball -->
+            <div class="row align-items-center mb-5 g-5 flex-lg-row-reverse reveal">
+                <div class="col-lg-6">
+                    <div class="visual-swiper-wrapper shadow-sm">
+                        <div class="swiper visual-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <video
+                                        class="visual-slide-video"
+                                        src="assets/videos/vg.mp4"
+                                        controls
+                                        muted
+                                        playsinline
+                                    ></video>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <img 
+                                        class="visual-slide-img"
+                                        src="assets/images/投影片4.png"
+                                        alt="Demo 圖 2"
+                                    >
+                                </div>
+
+
+                                <!-- Slide 3 -->
+                                <!-- <div class="swiper-slide">
+                                    <img 
+                                        class="visual-slide-img"
+                                        src="assets/images/hss-2.png"
+                                        alt="Demo 圖 2"
+                                    >
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 小圓點 -->
+                    <div class="visual-swiper-pagination"></div>      
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <span class="text-strong-blue small tracking-widest uppercase">Volleyball Tactical Analysis GUI</span>
+                        <h3 class="fw-bold my-3">競技排球戰術分析工具</h3>
+                        <p class="text-regular mb-4">
+                            在現代競技排球中，DataVolley、VolleyStation 是業界標準的數據記錄格式，但其原始檔案 (.dvw) 充斥著難以直接閱讀的代碼。
+                            本分析工具可整合<strong class="text-medium">跨場次大數據</strong>，針對<strong class="text-medium">特定戰術情境</strong> (如：指定進攻或舉球代號、球員搭配、關鍵分差表現)進行精準篩選，提供一個圖形化介面 (GUI)，一鍵將繁雜的代碼轉換為可視化的戰術圖表。
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge text-regular border px-3">多源數據整合</span>
+                            <span class="badge text-regular border px-3">全方位球員技能分析</span>
+                            <span class="badge text-regular border px-3">舉球員戰術解構</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Project: Ecommerce -->
+            <div class="row align-items-center mb-5 g-5 reveal">
+                <div class="col-lg-6">
+                    <!-- <div class="img-placeholder shadow-sm">
+                        <div class="text-center">
+                            <i data-lucide="shopping-bag" class="d-block mx-auto mb-2 opacity-50"></i>
+                            <span class="small">[點餐電商系統 Web 端展示]</span>
+                        </div>
+                    </div> -->
+                    <div class="visual-swiper-wrapper shadow-sm">
+                        <div class="swiper visual-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <video
+                                        class="visual-slide-video"
+                                        src="assets/videos/hss.mp4"
+                                        controls
+                                        muted
+                                        playsinline
+                                    ></video>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <img 
+                                        class="visual-slide-img"
+                                        src="assets/images/hss-1.png"
+                                        alt="Demo 圖 2"
+                                    >
+                                </div>
+
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <img 
+                                        class="visual-slide-img"
+                                        src="assets/images/hss-2.png"
+                                        alt="Demo 圖 2"
+                                    >
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 小圓點 -->
+                    <div class="visual-swiper-pagination"></div>                   
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="pe-lg-5">
+                        <span class="text-strong-blue small tracking-widest uppercase">HSS Real-Time Ordering System</span>
+                        <h3 class="fw-bold my-3">HSS 外帶點餐網頁</h3>
+                        <p class="text-regular mb-4">
+                            本網站為實際營運導向的一頁式外帶點餐平台，整合購物車、
+                            QR Code 行動支付與 LINE 即時通知機制。使用者完成結帳後，
+                            系統即自動產生訂單並同步推播至店家端，達成全流程自動化。</p>
+                        <div class="d-flex gap-3">
+                            <!-- <a href="#" class="btn btn-solid-black px-4"><i data-lucide="github" class="me-2 w-4 h-4"></i>Code</a> -->
+                            <a href="https://fengyu0926.github.io/Crazy/huangshushu/index" target="_blank" class="btn btn-outline-black px-4">Demo Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certificates -->
+    <section id="skills" class="py-5 bg-white border-top">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center reveal">
+                <div class="col-lg-5 text-center">
+                    <h3 class="h5 fw-bold mb-4">軟體技術分佈</h3>
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="45, 100" stroke="#1E3A8A" fill="none" stroke-width="3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="35, 100" stroke="#475569" stroke-dashoffset="-45" fill="none" stroke-width="3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="20, 100" stroke="#F59E0B" stroke-dashoffset="-80" fill="none" stroke-width="3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <!-- <path class="circle" stroke-dasharray="10, 100" stroke="#cbd5e1" stroke-dashoffset="-90" fill="none" stroke-width="3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /> -->
+                    </svg>
+                    <div class="mt-4 small text-strong">
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <span><i class="badge p-1 me-1" style="background:#1E3A8A"> </i> Python/AI 45%</span>
+                            <span><i class="badge p-1 me-1" style="background:#475569"> </i> PyQt/GUI 35%</span>
+                            <span><i class="badge p-1 me-1" style="background:#F59E0B"> </i> Web/Full-stack 20%</span>
+                            <!-- <span><i class="badge p-1 me-1" style="background:#cbd5e1"> </i> Others 10%</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 ">
+                    <h3 class="h5 fw-bold mb-4 text-center">硬體工程證照</h3>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="p-3 bg-light rounded-3 border-start border-4 border-primary">
+                                <h6 class="fw-bold mb-1">數位電子乙級</h6>
+                                <p class="small text-regular mb-0">
+                                    具備 VHDL 基礎邏輯設計與 CAD 電路佈線實務經驗。能獨立完成包含表面黏著元件 (SMD) 之電路板焊接，並具備基礎的硬體電路除錯概念。</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 bg-light rounded-3 border-start border-4 border-secondary">
+                                <h6 class="fw-bold mb-1">工業電子丙級</h6>
+                                <p class="small text-regular mb-0">
+                                    建立穩固的電子零件識讀與手工焊接基礎。能依據電路圖完成基礎電路組裝，並能操作示波器、三用電表等儀器進行基本的波形觀測與量測。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-5 bg-dark text-white">
+        <div class="container py-5">
+            <h2 class="display-6 fw-bold text-center mb-5">研究著作與發布</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="timeline-container ps-2 reveal">
+                        <!-- Pub 1 -->
+                        <div class="timeline-item">
+                            <!-- <div class="text-strong-orange small mb-1">2025/8</div> -->
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
+                                <div>
+                                    <h6 class="text-strong-orange mb-1">第十八屆崇越論文大賞</h6>
+                                    <p class="small mb-0">基於 YOLOv10-C2f-FEMA 的智慧異常偵測與即時通知系統</p>
+                                </div>
+                                <span class="tag-grey">入圍決賽</span>
+                                <!-- <span class="badge bg-secondary px-3 py-2 rounded-pill">入圍決賽</span> -->
+                            </div>
+                        </div>
+                        <!-- Pub 2 -->
+                        <div class="timeline-item">
+                            <!-- <div class="text-strong-orange small mb-1">2025/6</div> -->
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
+                                <div>
+                                    <h6 class="text-strong-orange mb-1">2025 IEEE IS3C 國際研討會</h6>
+                                    <p class="small mb-0">Smart Care System with Dual-Model Cooperative Triggering for Anomaly Detection <span class="text-strong-orange">(Best Paper)</span></p>
+                                </div>
+                                <a href="https://ieeexplore.ieee.org/document/11131096" target="_blank" class="btn btn-outline-white px-3">
+                                    IEEE 文章 <i data-lucide="external-link" class="ms-1 w-3 h-3"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 timeline-subitem">
+                                <div>
+                                    <p class="small mb-0">Design and Implementation of a YOLOv11-Based Classification System for Composite Boards</p>
+                                </div>
+                                <a href="https://ieeexplore.ieee.org/document/11131086" target="_blank" class="btn btn-outline-white px-3">
+                                    IEEE 文章 <i data-lucide="external-link" class="ms-1 w-3 h-3"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <!-- Pub 3 -->
+                        <div class="timeline-item">
+                            <!-- <div class="text-strong-orange small mb-1">2025/6</div> -->
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
+                                <div>
+                                    <h6 class="text-strong-orange mb-1">2025 IEEE ICCBE 國際研討會</h6>
+                                    <p class="small mb-0">YOLOv10-C2f-FENG: Efficient Anomaly Detection for Smart Care Monitoring</p>
+                                </div>
+                                <a href="https://ieeexplore.ieee.org/document/11256033" target="_blank" class="btn btn-outline-white px-3">
+                                    IEEE 文章 <i data-lucide="external-link" class="ms-1 w-3 h-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Pub 4 -->
+                        <div class="timeline-item">
+                            <!-- <div class="text-strong-orange small mb-1">2025/6</div> -->
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
+                                <div>
+                                    <h6 class="text-strong-orange mb-1">國立高雄科技大學 碩士論文</h6>
+                                    <p class="small mb-0">基於 YOLOv10-C2f-FEMA 的智慧異常偵測與即時通知系統</p>
+                                </div>
+                                <span class="tag-grey">國圖審核中</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-5 bg-white border-top">
+        <div class="container text-center">
+            <h4 class="fw-bold mb-4">期待與您團隊共同創造價值</h4>
+            <p class="text-regular mb-5 mx-auto" style="max-width: 650px;">
+                目前正積極尋找 AI 應用研發、設備工程等職位。如果您對我的背景感興趣，歡迎聯繫！
+            </p>
+            <div class="d-flex justify-content-center gap-4 mb-5">
+                <a href="https://github.com/FengYu0926" target="_blank" class="btn btn-light rounded-circle shadow-sm p-3"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=a0979384232@gmail.com" target="_blank" class="btn btn-light rounded-circle shadow-sm p-3"><i data-lucide="mail" class="w-5 h-5"></i></a>
+                <!-- <a href="" class="btn btn-light rounded-circle shadow-sm p-3"><i data-lucide="linkedin" class="w-5 h-5"></i></a> -->
+            </div>
+            <p class="text-regular small mb-0">© 2025 [Feng Yu] | National Kaohsiung University of Science and Technology</p>
+        </div>
+    </footer>
+
+</body>
+</html>
