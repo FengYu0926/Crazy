@@ -37,7 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 2. 綁定按鈕事件
     filterButtons.forEach(button => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const keepScrollY = window.scrollY;
+
             // 取得按鈕設定的篩選類別 (all, fries, mushroom...)
             const filter = this.dataset.filter;
 
@@ -63,6 +67,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     section.classList.remove('show');
                 }
             });
+
+            requestAnimationFrame(() => {
+                window.scrollTo({
+                    top: keepScrollY,
+                    left: 0,
+                    behavior: 'auto'
+                });
+            });
+
+            setTimeout(() => {
+                window.scrollTo({
+                    top: keepScrollY,
+                    left: 0,
+                    behavior: 'auto'
+                });
+            }, 30);
         });
     });
 });
