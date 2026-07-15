@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="HSS" />
+        <meta name="description" content="黃薯薯鹿和店，提供現點現炸炸物、線上點餐、預約取餐與快速付款服務" />
+        <meta property="og:image" content="https://fengyu0926.github.io/Crazy/huangshushu/assets/huangshushu.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <title>HSS</title>
+        <!-- 網站圖示 -->
+        <link rel="icon" type="image/png" href="assets/huangshushu.png" />
+        <!-- 引入 Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- 引入 Simple-DataTables CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet">
+        <!-- 引入 Swiper CSS -->
+        <link  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+        <!-- 引入 Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- 引入 Simple-DataTables JS -->
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
+        <!-- 引入 Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <!-- Font Awesome 圖示（免費版）-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google 字體 -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- 核心主題 CSS / JS -->
+        <link href="styles2.css?v=20260607" rel="stylesheet" /> <!-- css/styles.css?v=20250807 -->
+        <script src="scripts.js?v=20260607 "></script> <!-- js/scripts.js?v=20250807 -->
+    </head>
+
+    <body>
+        <!-- 導覽列 -->
+        <nav class="navbar navbar-expand-lg navbar-glass fixed-top">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- 左邊 Logo -->
+                <div class="navbar-brand" href="index.html">
+                    <img src="assets/sweet-potato.png" alt="logo" class="d-inline-block align-text-top">
+                    黃薯薯鹿和店
+                </div>
+
+                <!-- 右邊功能區塊 -->
+                <div class="navbar-tool">
+                    <!-- <li>
+                        <a href="" class="icon-wrapper" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <img src="assets/user.png" alt="icon">
+                        </a>
+                    </li> -->
+                    <div class="cart-wrapper">
+                        <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+                            <span class="text-muted">購物車</span>
+                            <strong id="cartGrandnavbar" class="">$0</strong>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+
+        <!-- 主橫幅區塊 -->
+        <div class="banner-ad">
+            <div class="swiper main-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="main-banner">
+                            <div class="banner-content">               
+                                <h1><span class="hs-main">甘梅薯條</span><span class="hs-end">人氣推薦</span></h1>
+
+                                <div class="product-features">
+                                    <span>嚴選優質地瓜</span>
+                                    <span class="divider">|</span>
+                                    <span>職人現點現炸</span>
+                                    <!-- <span class="divider">|</span>
+                                    <span>獨家秘製甘梅</span> -->
+                                </div>
+
+                                <p class="commercial-desc">
+                                    金黃酥脆薄皮，包裹綿密香甜地瓜心，<br>
+                                    灑上招牌甘梅粉，呈現回甘極致享受。
+                                </p>
+
+                                <a class="btn" href="index.html">開始下單</a>
+                            </div>
+
+                            <div class="img-wrapper">
+                                <img src="assets/images/地瓜1.png" alt="甘梅薯條">
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="main-banner">
+                            <div class="banner-content">
+                                <h1><span class="hs-main">輕鬆訂餐</span><span class="hs-end">三步驟</span></h1>
+                                
+                                <ul class="step-list">
+                                    <li>
+                                        <span class="step-num">1</span>
+                                        <span class="step-text">挑選餐點</span>
+                                        <span class="step-small">瀏覽美味菜單，一鍵加入購物車</span>
+                                    </li>
+                                    <li>
+                                        <span class="step-num">2</span>
+                                        <span class="step-text">預約資訊</span>
+                                        <span class="step-small">輸入手機與帳號末五碼、取餐時間</span>
+                                    </li>
+                                    <li>
+                                        <span class="step-num">3</span>
+                                        <span class="step-text">快速結帳</span>
+                                        <span class="step-small">掃碼完成付款，到店取餐免排隊</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="img-wrapper">
+                                <img src="assets/huangshushu.png" alt="黃薯薯鹿和店">
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="main-banner">
+                            <div class="banner-content">
+                                <h1><span class="hs-main">營業時間</span><span class="hs-end">服務時段</span></h1>
+                                
+                                <ul class="hours-list">
+                                    <li>
+                                        <span class="hours-day">週一至週四</span>
+                                        <span class="hours-time">13:30 - 19:00</span>
+                                    </li>
+                                    <li class="is-closed">
+                                        <span class="hours-day">週五</span>
+                                        <span class="hours-time"><i class="fas fa-mug-hot"></i> 公休</span>
+                                    </li>
+                                    <li>
+                                        <span class="hours-day">週六、週日</span>
+                                        <span class="hours-time">12:00 - 19:00</span>
+                                    </li>
+                                    <li>
+                                        <span class="hours-day">國定假日</span>
+                                        <a href="https://www.facebook.com/p/%E9%BB%83%E8%96%AF%E8%96%AF%E9%B9%BF%E5%92%8C%E5%BA%97-61563435041819/" target="_blank" class="fb-link">
+                                            <i class="fab fa-facebook-square"></i> 詳見公告(點擊)
+                                        </a>
+                                        <!-- <span class="time-label">正常營業</span> -->
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="map-wrapper">
+                                <iframe 
+                                    title="黃薯薯鹿和店地圖"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.4704477248465!2d120.47925999999998!3d24.084946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346946fdc14449bd%3A0xfbc06e93dbc712ce!2z6buD6Jav6Jav6bm_5ZKM5bqX!5e0!3m2!1szh-TW!2stw!4v1769782136494!5m2!1szh-TW!2stw">
+                                </iframe>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="main-banner">
+                            <div class="banner-content">
+                                <h1><span class="hs-main">聯絡店家</span><span class="hs-end">即時資訊</span></h1>
+
+                                <ul class="contact-list">
+                                    <li>
+                                        <span class="contact-label">聯絡電話</span>
+                                        <a href="tel:0939617827" class="contact-value contact-phone">0939617827</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="contact-label">訂單確認</span>
+                                        <span class="contact-value">付款後店家會收到通知</span>
+                                    </li>
+                                </ul>
+
+                                <p class="commercial-desc">
+                                    若需大量訂購、臨時調整取餐時間，<br>
+                                    歡迎先透過電話或 LINE 與店家確認。
+                                </p>
+                            </div>
+
+                            <div class="img-wrapper">
+                                <img src="assets/lineqrcode.png" alt="店家 LINE QR code">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- 商品區塊 -->
+        <div class="product-tabs d-flex">
+            <h3 id="tabs-title" class="tabs-title">全日餐點</h3>
+            <div class="filter-tabs">
+                <button class="product-btn active" data-filter="all">📌全部</button>
+                <button class="product-btn" data-filter="fries">🍟薯類</button>
+                <button class="product-btn" data-filter="mushroom">🍄菇類</button>
+                <button class="product-btn" data-filter="snacks">🍪點心</button>
+                <button class="product-btn" data-filter="composite">⭐綜合</button>
+                <button class="product-btn" data-filter="limited">🏷️限定</button>
+            </div>
+        </div>
+
+        <!-- 薯類 -->
+        <section class="product-section" data-category="fries" >
+            <h3 class="section-title">🍟薯類炸物🍟</h3>
+            <!-- 商品卡片列表 -->
+            <div class="product-grid">
+
+                <!-- 甘梅薯條 -->
+                <div class="product-card">
+                    <div class="product-img product-img-zoom">
+                        <span class="popular-badge">推薦</span>
+                        <img src="assets/images/地瓜1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">甘梅薯條</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="plum_fries" data-product-id="price_011" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 搖滾脆薯 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/馬鈴薯1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">搖滾脆薯</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="rock_fries" data-product-id="price_011" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 爆漿地瓜球 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/地瓜球1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">爆漿地瓜球</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="sweetpotato_ball" data-product-id="price_021" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+        <!-- 菇類 -->
+        <section class="product-section" data-category="mushroom">
+            <h3 class="section-title">🍄菇類炸物🍄</h3>
+            <!-- 商品卡片列表 -->
+            <div class="product-grid">
+                
+                <!-- 杏鮑菇 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/杏鮑菇1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">杏鮑菇</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="king_oyster_mushroom" data-product-id="price_011" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 秀珍菇 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/秀珍菇1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">秀珍菇</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="shimeji_mushroom" data-product-id="price_011" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 金針菇 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/金針菇1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">金針菇</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="enoki_mushroom" data-product-id="price_011" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+        <!-- 點心 -->
+        <section class="product-section" data-category="snacks">
+            <h3 class="section-title">🍪經典點心🍪</h3>
+            <!-- 商品卡片列表 -->
+            <div class="product-grid">
+                
+                <!-- 芋頭餅 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="popular-badge">推薦</span>
+                        <img src="assets/images/芋頭餅1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">芋頭餅</h5>
+                        <div class="product-price">$30</div>
+                        <button class="add-cart" data-sku="taro_cake" data-product-id="price_031" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 起司棒 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="popular-badge">推薦</span>
+                        <img src="assets/images/起司棒1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">起司棒</h5>
+                        <div class="product-price">$40</div>
+                        <button class="add-cart" data-sku="cheese_stick" data-product-id="price_033" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 玉米布丁酥 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/玉米布丁酥1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">玉米布丁酥</h5>
+                        <div class="product-price">$40</div>
+                        <button class="add-cart" data-sku="corn_custard_pastry" data-product-id="price_034" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 蘿蔔糕 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/蘿蔔糕1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">蘿蔔糕</h5>
+                        <div class="product-price">$35</div>
+                        <button class="add-cart" data-sku="radish_cake" data-product-id="price_032" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 紫米糕 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/素米血1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">紫米糕</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="purple_rice_cake" data-product-id="price_011" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+        <!-- 綜合 -->
+        <section class="product-section" data-category="composite">
+            <h3 class="section-title">⭐隨心綜合⭐</h3>
+            <!-- 商品卡片列表 -->
+            <div class="product-grid">
+                
+                <!-- 薯類綜合 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/薯類綜合1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">薯類綜合</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="mixed_potato_platter" data-product-id="price_011" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 菇類綜合 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/菇類綜合1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">菇類綜合</h5>
+                        <div class="product-price">$50起</div>
+                        <button class="add-cart" data-sku="mixed_mushroom_platter" data-product-id="price_022" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+
+                <!-- 全部綜合 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/全部綜合1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">全部綜合</h5>
+                        <div class="product-price">$40起</div>
+                        <button class="add-cart" data-sku="mixed_combo_platter" data-product-id="price_011" data-bs-toggle="modal" data-bs-target="#addToCartModal">加入訂單</button>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+        <!-- 限定 -->
+        <section class="product-section" data-category="limited">
+            <h3 class="section-title">🏷️期間限定🏷️</h3>
+            <!-- 商品卡片列表 -->
+            <div class="product-grid">
+                
+                <!-- 敬請期待 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <!-- <span class="popular-badge">推薦</span> -->
+                        <img src="assets/images/馬鈴薯1.png" alt="Banana">
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-name">敬請期待</h5>
+                        <div class="product-price">暫無售價</div>
+                        <button class="add-cart" disabled>加入訂單</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- <div class="blank-space"></div> -->
+
+        <!-- 頁腳 -->
+        <!-- <footer class="footer">
+            <ul class="footer-links">
+                <li><a href data-bs-toggle="modal" data-bs-target="#contactModal">聯絡我們</a></li>
+            </ul>
+        </footer> -->
+        
+    </body>
+
+    <!----------------------------------------------------------->
+
+    <!-- 聯絡我們 窗口 -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 窗口標題 -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">聯絡我們</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+                </div>
+                <!-- 窗口內容 -->
+                <div class="modal-body">
+                    <p>如果您有任何問題，請透過以下方式聯絡我們：</p>
+                    <ul>
+                        <li>彰化縣鹿港鎮鹿和路三段575號</li>
+                        <li>電話: 09-xxxx-xxxx</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 付款 Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalLabel">掃碼付款</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <!-- QR Code 圖片：換成你的實際路徑 -->
+                <div class="text-center mb-3">
+                <img id="payQrImg" src="assets\paycode.jpg" alt="付款 QR Code"
+                    class="img-fluid border rounded" style="max-width: 260px;">
+                <div class="form-text mt-2">請使用行動支付/銀行 App 掃碼完成付款</div>
+                </div>
+
+                <!-- 訂單摘要 -->
+                <div class="border rounded p-2 bg-light">
+                <div class="d-flex justify-content-between">
+                    <span class="fw-semibold">本次應付</span>
+                    <span class="fw-bold" id="payTotal">$0</span>
+                </div>
+                <hr class="my-2">
+                <div class="small text-muted mb-1" id="payMeta"></div>
+                <pre class="small mb-0" id="payOrderPreview" style="white-space: pre-wrap;"></pre>
+                </div>
+
+                <div class="form-text mt-2">
+                    付款完成後請點「已付款」。店家將依「帳號後五碼」人工核對。
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn" data-bs-dismiss="modal">關閉</button>
+                <button type="button" class="btn" id="btnPaidConfirm">已付款</button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 貨到付款確認 Modal-->
+    <div class="modal fade" id="codConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">💰 確認訂單(貨到付款)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning small mb-3">
+                    ⚠️ 貨到付款採<strong>取餐時付現</strong>,請確認以下訂單無誤後送出。
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="fw-semibold mb-1">📋 訂單內容</div>
+                        <div id="codOrderPreview" class="small text-secondary"
+                            style="white-space: pre-wrap; background:#f8f9fa; padding:10px; border-radius:6px;"></div>
+                    </div>
+
+                    <div class="mb-2 d-flex justify-content-between">
+                        <span class="text-secondary">電話</span>
+                        <span id="codPhone" class="fw-semibold"></span>
+                    </div>
+                    <div class="mb-2 d-flex justify-content-between">
+                        <span class="text-secondary">取餐時間</span>
+                        <span id="codPickup" class="fw-semibold"></span>
+                    </div>
+                    <div class="d-flex justify-content-between border-top pt-3 mt-3">
+                        <span class="fw-bold">應付金額</span>
+                        <span id="codTotal" class="fw-bold text-danger fs-5"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-danger" id="btnCodConfirm">確認送出訂單</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 購物車 窗口 -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header">
+            <h4 id="offcanvasCartLabel">購物車</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- 清單容器：JS 會把項目塞進來 -->
+            <ul id="cartList" class="list-group mb-3"></ul>
+
+            <!-- 小計／合計 -->
+            <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                <span class="fw-semibold">合計</span>
+                <strong id="cartGrand" class="fs-5">$0</strong>
+            </div>
+
+            <div class="mt-3">
+                <!-- 電話 + 帳號後五碼 同一行 -->
+                  <div class="row g-2 mb-2">
+                    <div class="col-6">
+                    <label for="checkoutPhone" class="form-label mb-1">電話</label>
+                    <input
+                        type="tel"
+                        class="form-control"
+                        id="checkoutPhone"
+                        placeholder="例如：0912345678"
+                        inputmode="tel"
+                        autocomplete="tel"
+                        required
+                    >
+                    </div>
+
+                    <div class="col-6">
+                    <label for="transferLast5" class="form-label mb-1">帳號後五碼</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="transferLast5"
+                        placeholder="例如：12345"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        maxlength="5"
+                        pattern="\d{5}"
+                        required
+                    >
+                    </div>
+                </div>
+
+                <!-- 日期 + 時間 同一行 -->
+                <div class="row g-2 mb-2">
+                    <div class="col-6">
+                        <label for="pickupDate" class="form-label mb-1">取餐日期</label>
+                        <input type="date" class="form-control" id="pickupDate" required onkeydown="return false">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="pickupTime" class="form-label mb-1">取餐時間</label>
+                        <select class="form-select" id="pickupTime" required disabled>
+                        <option value="">請先選擇日期</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 提示文字：獨立一行比較好看 -->
+                <div id="pickupHint" class="form-text"></div>
+
+                <!-- 送單用：YYYY-MM-DDTHH:MM -->
+                <input type="hidden" id="pickupDateTime" name="pickupTime">
+
+                <!-- 付款方式選擇 -->
+                <div class="mt-3">
+                    <label class="form-label mb-2">付款方式</label>
+                    <div class="pay-method-group">
+                        <label class="pay-method-option">
+                            <input type="radio" name="payMethod" value="qrcode" checked>
+                            <div class="pay-method-card">
+                                <span class="pay-method-icon">📱</span>
+                                <div>
+                                    <div class="pay-method-title">TW QRCode 轉帳</div>
+                                    <div class="pay-method-desc">掃碼付款,需填帳號後五碼</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="pay-method-option">
+                            <input type="radio" name="payMethod" value="cod">
+                            <div class="pay-method-card">
+                                <span class="pay-method-icon">💰</span>
+                                <div>
+                                    <div class="pay-method-title">貨到付款</div>
+                                    <div class="pay-method-desc">取餐現場付現,不需轉帳</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-3 d-grid gap-2">
+                <button id="btnClearCart" class="btn btn-clear-cart">清空購物車</button>
+                <button id="btnCheckout" class="btn">前往結帳</button>
+            </div>
+        
+        </div>
+    </div>
+
+    <!-- 加入購物車 窗口 -->
+    <div class="modal fade" id="addToCartModal" tabindex="-1" aria-label="商品詳細設定" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content add-cart-modal">
+
+                <!-- 窗口商品圖片 -->
+                <div class="modal-header add-cart-modal-header">
+                    <div class="modal-product-image-wrap">
+                        <img class="modal-product-image" src="assets/huangshushu.png" alt="商品圖片">
+                    </div>
+                    <button type="button" class="btn-close add-cart-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- 窗口內容 -->
+                <div class="modal-body add-cart-modal-body">
+                    <div class="mb-3">
+                        <input type="text" class="form-control modal-product-name-field" id="modalProductName" readonly>
+                    </div>
+
+                    <div class="mb-3" id="variantWrap" style="display:none;">
+                        <!-- <label class="form-label">份量</label> -->
+                        <select class="form-select" id="variantSelect"></select>
+                    </div>
+
+                    <div class="mb-3" id="tasteWrap" style="display:none;">
+                        <label class="form-label" id="tasteLabel">口味(單選)</label>
+                        <div id="tasteContainer" class="taste-options"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">備註</label>
+                        <textarea class="form-control" id="modalNote" rows="1" placeholder="粉多一點、粉少一點"></textarea>
+                        <small class="text-muted">#您可能需要支付額外費用。</small>
+                    </div>
+
+                    <div class="modal-subtotal">小計：$<span id="modalSubtotal">0</span></div>
+                </div>
+
+                <div class="modal-footer add-cart-modal-footer">
+                    <div class="modal-qty-control">
+                        <!-- <span class="modal-footer-label">數量</span> -->
+                        <button type="button" class="btn" id="qtyMinus">−</button>
+                        <span id="modalQty" class="mx-2">1</span>
+                        <button type="button" class="btn" id="qtyPlus">+</button>
+                    </div>
+
+                    <div class="modal-footer-actions">                        
+                        <button type="button" class="btn" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn" id="confirmAddCart">加入購物車</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</html>
